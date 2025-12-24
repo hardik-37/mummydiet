@@ -1,0 +1,508 @@
+:root {
+    --primary: #8C1D40;     /* main wine color */
+    --primary-light: #B23A5B;
+    --background: #FAF7F8;
+    --text-dark: #2E2E2E;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: var(--background);
+    color: var(--text-dark);
+}
+
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+section {
+    padding: 40px;
+}
+
+h2 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.hero {
+    height: 80vh;
+    background: linear-gradient(
+        to right,
+        var(--primary),
+        var(--primary-light)
+    );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+
+.hero button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 6px;
+    background: white;
+    color: var(--primary);
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.hero-text {
+    text-align: center;
+}
+
+.hero button:hover {
+    background: #f2f2f2;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: white;
+    border-bottom: 2px solid var(--primary);
+    position: sticky;
+    top: 0;
+}
+
+nav h2 {
+    color: var(--primary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+}
+.services {
+    padding: 60px 40px;
+}
+
+.service-cards {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .service-cards {
+        flex-direction: column;
+    }
+}
+.logo img {
+    height: 125px;      /* adjust if needed */
+    width: auto;
+    display: block;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+
+
+
+.banner-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.banner-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.banner-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.banner {
+    min-width: 100%;
+    height: 100%;
+
+    background: white;
+    color: var(--primary);
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 26px;
+    font-weight: 600;
+
+    scroll-snap-align: start;
+    flex-shrink: 0;
+}
+
+
+/* Hide scrollbar */
+.banner-container {
+    scrollbar-width: none;          /* Firefox */
+    -ms-overflow-style: none;       /* IE / Edge */
+}
+
+.banner-container::-webkit-scrollbar {
+    display: none;                  /* Chrome / Safari */
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: white;
+    transform: scale(1.3);
+}
+.bmi-btn {
+    padding: 8px 16px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.bmi-btn:hover {
+    background: var(--primary-light);
+}
+.bmi-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+.bmi-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.bmi-card input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.bmi-card button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.bmi-card button:hover {
+    background: var(--primary-light);
+}
+
+#bmi-result {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.bmi-dial {
+    width: 200px;
+    height: 100px;
+    border-radius: 100px 100px 0 0;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        to right,
+        #f44336 0%,     /* Underweight - red */
+        #4caf50 35%,    /* Normal - green */
+        #ffeb3b 65%,    /* Overweight - yellow */
+        #f44336 100%    /* Obese - red */
+    );
+}
+
+
+.needle {
+    width: 2px;
+    height: 90px;
+    background: #000;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-origin: bottom;
+    transform: rotate(-90deg);
+    transition: transform 0.8s ease;
+}
+.bmi-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: 8px;
+    color: #666;
+}
+
+.bmi-labels span {
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.bmi-labels span.active {
+    font-weight: 700;
+}
+.bmi-labels span.under { color: #f44336; }   /* red */
+.bmi-labels span.normal { color: #4caf50; }  /* green */
+.bmi-labels span.over { color: #ff9800; }    /* yellow-orange */
+.bmi-labels span.obese { color: #f44336; }   /* red */
+
+.programs-page {
+    min-height: 100vh;
+    padding: 80px 60px;
+    background: #fff;
+}
+
+.programs-header {
+    max-width: 600px;
+    margin-bottom: 60px;
+}
+
+.programs-header h2 {
+    font-size: 42px;
+    font-weight: 400;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.programs-header p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.programs-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+.program-column span {
+    display: block;
+    font-size: 15px;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    cursor: pointer;
+    position: relative;
+}
+
+.program-column span::after {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #2c3e50;
+    margin-top: 8px;
+}
+
+.program-column span:hover {
+    color: var(--primary);
+}
+
+.program-column span:hover::after {
+    background: var(--primary);
+}
+/* PROGRAM PAGES */
+
+.program-nav {
+    padding: 20px 40px;
+    background: white;
+    border-bottom: 1px solid #eee;
+}
+
+.program-nav a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.program-hero {
+    padding: 80px 40px;
+    background: linear-gradient(
+        to right,
+        var(--primary),
+        var(--primary-light)
+    );
+    color: white;
+    text-align: center;
+}
+
+.program-hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.program-hero p {
+    font-size: 18px;
+}
+
+.program-content {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.program-block {
+    margin-bottom: 50px;
+}
+
+.program-block h2 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.program-block ul {
+    padding-left: 20px;
+}
+
+.program-block li {
+    margin-bottom: 8px;
+}
+
+.program-btn {
+    padding: 12px 26px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.program-btn:hover {
+    background: var(--primary-light);
+}
+/* PROGRAM BANNER */
+/* FULL PAGE BANNER */
+.banner-hero {
+    width: 100vw;
+    height: 65vh;
+
+    background-image: url("images/weight-loss-banner.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    margin: 0;
+    padding: 0;
+}
+@media (max-width: 768px) {
+    .banner-hero {
+        height: 32vh;
+    }
+}
+/* Weight Maintenance Banner */
+.maintenance-banner {
+    background-image: url("images/weight-maintenance-banner.png");
+}
+
+
+
+

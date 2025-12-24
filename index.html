@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Santushti | Holistic Health & Healing</title>
+
+    <!-- Google Font (optional but fine to keep) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">
+    <img src="images/logo.png" alt="Santushti Logo">
+</div>
+
+
+        <ul class="nav-links">
+            <li><a href="#about">ABOUT ANJANA</a></li>
+            <li><a href="#work">HOW WE WORK</a></li>
+            <li><a href="#programs">PROGRAMS</a></li>
+            <li><a href="#testimonials">TESTIMONIALS</a></li>
+            <li>
+    <button class="bmi-btn" onclick="openBMI()">BMI CALCULATOR</button>
+    </li>
+
+            <li><a href="#blog">BLOG</a></li>
+            <li><a href="#contact">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+<section class="hero">
+
+
+
+    <div class="banner-container">
+        <div class="banner">Banner 1</div>
+        <div class="banner">Banner 2</div>
+        <div class="banner">Banner 3</div>
+        
+    </div>
+
+</section>
+<div class="dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+
+
+
+    <!-- ANCHOR SECTIONS -->
+    <section id="about">
+        <h2>About Anjana</h2>
+    </section>
+
+    <section id="work">
+        <h2>How We Work</h2>
+    </section>
+
+
+    <section id="programs" class="programs-page">
+
+    <div class="programs-header">
+        <h2>Shop Your Programme</h2>
+        <p>
+            Is there a healthier you waiting to come out?
+            Choose a programme that suits your goals and
+            your body’s unique needs.
+        </p>
+    </div>
+
+    <div class="programs-list">
+
+        <div class="program-column">
+            <a href="weight-loss.html">Weight Loss Program</a>
+            <span onclick="openProgram('muscleGain')">Muscle Gain Programme</span>
+          <a href="weight-maintenance.html">Weight Maintenance Programme</a>
+
+
+        <div class="program-column">
+            <span onclick="openProgram('diabetes')">Diabetes Management Programme</span>
+            <span onclick="openProgram('medical')">Medical Adjunct Programme</span>
+            <span onclick="openProgram('lactation')">Lactation Diet Programme</span>
+        </div>
+
+        <div class="program-column">
+            <span onclick="openProgram('pregnancy')">Pregnancy Diet Programme</span>
+            <span onclick="openProgram('pcod')">PCOD / PCOS Programme</span>
+            <span onclick="openProgram('healthy')">Healthy Diet Programme</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+    </section>
+
+    <section id="blog">
+        <h2>Blog</h2>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+    </section>
+<script src="script.js"></script>
+<div id="bmi-modal" class="bmi-modal">
+    <div class="bmi-card">
+        <span class="close-btn" onclick="closeBMI()">×</span>
+
+        <h2>BMI Calculator</h2>
+        <div class="bmi-dial">
+    <div class="needle" id="needle"></div>
+</div>
+<div class="bmi-labels">
+    <span id="label-under">Underweight</span>
+    <span id="label-normal">Normal</span>
+    <span id="label-over">Overweight</span>
+    <span id="label-obese">Obese</span>
+</div>
+
+
+        <input type="number" id="weight" placeholder="Weight (kg)">
+<input type="number" id="height" placeholder="Height (cm)">
+
+<button onclick="calculateBMI()">Calculate BMI</button>
+
+<p id="bmi-result"></p>
+
+    </div>
+</div>
+<div id="program-modal" class="bmi-modal">
+    <div class="bmi-card program-card">
+        <span class="close-btn" onclick="closeProgram()">×</span>
+
+        <h2 id="program-title"></h2>
+        <p id="program-content"></p>
+    </div>
+</div>
+
+
+</body>
+</html>
