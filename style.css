@@ -482,26 +482,24 @@ nav a {
 /* PROGRAM BANNER */
 /* FULL PAGE BANNER */
 .banner-hero {
-    width: 100vw;
     height: 65vh;
-
     background-image: url("images/weight-loss-banner.png");
-    background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
-
-    margin: 0;
-    padding: 0;
+    background-position: center;
 }
+
 @media (max-width: 768px) {
     .banner-hero {
-        height: 32vh;
+        height: 40vh;
+        background-image: url("images/banner1.png");
+        background-position: center;
     }
 }
 /* Weight Maintenance Banner */
 .maintenance-banner {
     background-image: url("images/weight-maintenance-banner.png");
 }
+
 
 
 
