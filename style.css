@@ -482,7 +482,7 @@ nav a {
 /* PROGRAM BANNER */
 /* FULL PAGE BANNER */
 .banner-hero {
-    height: 65vh;
+    height: 25vh;
     background-image: url("images/weight-loss-banner.png");
     background-size: cover;
     background-position: center;
@@ -495,11 +495,193 @@ nav a {
         background-position: center;
     }
 }
+
 /* Weight Maintenance Banner */
 .maintenance-banner {
     background-image: url("images/weight-maintenance-banner.png");
 }
+.programs-grid-page {
+    padding: 80px 40px;
+    background: #fff;
+}
 
+.program-heading {
+    font-size: 28px;
+    margin: 60px 0 25px;
+    color: var(--primary);
+}
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.program-card {
+    height: 180px;
+    background: #111;
+    border-radius: 14px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+}
+
+.program-card.wide {
+    max-width: 600px;
+    height: 220px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .program-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .program-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.program-content {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.program-block {
+    margin-bottom: 50px;
+}
+
+.program-block h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.program-block h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.program-block p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 16px;
+}
+
+/* Feature list */
+.feature-list {
+    padding-left: 18px;
+}
+
+.feature-list li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Pricing table */
+.pricing-table {
+    max-width: 500px;
+    border-top: 1px solid #ddd;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-weight: 500;
+}
+.program-content {
+    position: relative;
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 60px 30px;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(11, 107, 16, 0.22), transparent 60%),
+        radial-gradient(circle at 80% 80%, rgba(140,29,64,0.22), transparent 60%),
+        linear-gradient(180deg, #ffffff 0%, #f3ecef 100%);
+
+    background-size: 200% 200%;
+    animation: softGradientMove 18s ease-in-out infinite;
+
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.08);
+    border: 1px solid rgba(140,29,64,0.08);
+}
+
+
+.program-block {
+    margin-bottom: 60px;
+}
+
+.program-block:not(:last-child) {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+@media (max-width: 768px) {
+    .program-content {
+        padding: 40px 20px;
+        margin: 40px 15px;
+        border-radius: 16px;
+        animation-duration: 25s; /* even calmer on mobile */
+    }
+}
+
+@keyframes softGradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* Background wrapper */
+.program-bg {
+    position: relative;
+    background-image: url("images/programs-bg.jpg"); /* <-- image name yahin */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 10px 0;
+}
+
+/* White overlay for readability */
+.program-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.70);
+    pointer-events: none;
+}
+
+/* Content stays above overlay */
+.program-content {
+    position: relative;
+    z-index: 1;
+}
+@media (max-width: 768px) {
+    .program-bg {
+        padding: 50px 0;
+        background-position: top;
+    }
+}
 
 
 
