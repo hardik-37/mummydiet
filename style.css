@@ -687,14 +687,24 @@ nav a {
         grid-template-columns: 1fr;   /* 👈 one below the other */
         gap: 20px;
     }
-
-    .program-card {
-        height: 160px;   /* thoda compact on mobile */
-    }
+/* Default card height (desktop + tablet) */
+.program-card {
+    height: 200px;
 }
 
+/* MOBILE FIX: one card per row */
+@media (max-width: 768px) {
 
+    .program-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
 
-
-
-
+    .program-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+        height: 160px; /* compact on mobile */
+    }
+}
