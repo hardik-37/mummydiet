@@ -707,4 +707,35 @@ nav a {
         flex: 0 0 100% !important;
         height: 160px; /* compact on mobile */
     }
+}}
+.contact-section {
+    padding: 80px 40px;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(11,107,16,0.22), transparent 60%),
+        radial-gradient(circle at 80% 80%, rgba(140,29,64,0.22), transparent 60%),
+        linear-gradient(180deg, #ffffff 0%, #f3ecef 100%);
+}
+
+.contact-wrapper {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-map {
+    min-height: 320px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-map {
+        min-height: 260px;
+    }
 }
