@@ -682,6 +682,18 @@ nav a {
         background-position: top;
     }
 }
+@media (max-width: 768px) {
+    .program-grid {
+        grid-template-columns: 1fr;   /* 👈 one below the other */
+        gap: 20px;
+    }
+
+    .program-card {
+        height: 160px;   /* thoda compact on mobile */
+    }
+}
+
+
 
 
 
