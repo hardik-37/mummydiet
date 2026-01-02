@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Santushti | Holistic Health & Healing</title>
 
-    <!-- Google Font (optional but fine to keep) -->
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -15,70 +15,152 @@
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="logo">
-    <img src="images/logo.png" alt="Santushti Logo">
-</div>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="images/logo.png" alt="Santushti Logo">
+    </div>
 
+    <ul class="nav-links">
+        <li><a href="#about">ABOUT ANJANA</a></li>
+        <li><a href="#work">HOW WE WORK</a></li>
 
-        <ul class="nav-links">
-            <li><a href="#about">ABOUT ANJANA</a></li>
-            <li><a href="#work">HOW WE WORK</a></li>
-            <li><a href="#programs">PROGRAMS</a></li>
-            <li><a href="#testimonials">TESTIMONIALS</a></li>
-            <li>
-    <button class="bmi-btn" onclick="openBMI()">BMI CALCULATOR</button>
-    </li>
+        <li>
+            <button class="bmi-btn" onclick="openBMI()">BMI CALCULATOR</button>
+        </li>
 
-            <li><a href="#blog">BLOG</a></li>
-            <li><a href="#contact">CONTACT US</a></li>
-        </ul>
-    </nav>
+        <li><a href="#programs">SELECT YOUR PROGRAM</a></li>
+        <li><a href="#testimonials">NUTRIGENOMICS COUNSELLOR</a></li>
+        <li><a href="#testimonials">TESTIMONIALS</a></li>
+        <li><a href="#contact">CONTACT US</a></li>
+    </ul>
+</nav>
 
-    <!-- HERO SECTION -->
+<!-- HERO SECTION -->
 <section class="hero">
-
-
-
     <div class="banner-container">
         <div class="banner">Banner 1</div>
         <div class="banner">Banner 2</div>
         <div class="banner">Banner 3</div>
-        
     </div>
-
 </section>
+
 <div class="dots">
     <span class="dot active"></span>
     <span class="dot"></span>
     <span class="dot"></span>
 </div>
 
+<!-- ABOUT -->
+<section id="about" class="about-section">
+
+    <div class="about-wrapper">
+
+        <!-- LEFT: PHOTO -->
+        <div class="about-image">
+            <img src="images/Dr Anjana.png
+            " alt="Dr. Anjana Chugh">
+        </div>
+
+        <!-- RIGHT: TEXT -->
+        <div class="about-content">
+    <h3>Dr. Anjana Chugh</h3>
+
+    <!-- SHORT INTRO (always visible) -->
+    <p>
+        Dr. Anjana is a certified nutritionist and wellness coach
+        focused on sustainable, practical health solutions.
+    </p>
+
+    <!-- EXPANDABLE CONTENT -->
+    <div class="about-more">
+        <p>
+            With years of experience, she has helped individuals and families
+            achieve long-term wellbeing through personalized nutrition and
+            lifestyle changes rather than short-term dieting.
+        </p>
+
+        <div class="about-achievements">
+            <h3>Achievements & Credentials</h3>
+            <ul>
+                <li>Certified Clinical Nutritionist</li>
+                <li>10+ years of experience in dietary consulting</li>
+                <li>Specialist in women’s health & lifestyle disorders</li>
+                <li>Helped 1000+ clients achieve sustainable health</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- READ MORE BUTTON -->
+    <button class="read-more-btn" onclick="toggleAbout()">Read More</button>
+</div>
+
+</section>
 
 
-    <!-- ANCHOR SECTIONS -->
-    <section id="about">
-        <h2>About Anjana</h2>
-    </section>
+<!-- HOW WE WORK -->
+<section id="work" class="work-section">
 
-    <section id="work">
-        <h2>How We Work</h2>
-    </section>
+    <h2 class="section-title">How We Work</h2>
+
+    <div class="work-wrapper">
+
+        <div class="work-step">
+            <span class="step-number">01</span>
+            <h3>Understanding You</h3>
+            <p>
+                We begin by understanding your lifestyle, food habits,
+                health history, and personal goals.
+            </p>
+        </div>
+
+        <div class="work-step">
+            <span class="step-number">02</span>
+            <h3>Assessment & Analysis</h3>
+            <p>
+                Based on your inputs, we assess nutritional needs,
+                metabolic patterns, and lifestyle factors.
+            </p>
+        </div>
+
+        <div class="work-step">
+            <span class="step-number">03</span>
+            <h3>Personalised Nutrition Plan</h3>
+            <p>
+                A practical and customised nutrition plan is created
+                to suit your body, routine, and preferences.
+            </p>
+        </div>
+
+        <div class="work-step">
+            <span class="step-number">04</span>
+            <h3>Ongoing Support & Guidance</h3>
+            <p>
+                Regular follow-ups and guidance ensure steady progress
+                and long-term sustainable results.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<h2 class="section-title select-program-heading">
+    Select Your Program
+</h2>
 
 
-    <section id="programs" class="programs-grid-page">
+<!-- PROGRAMS -->
+<section id="programs" class="programs-grid-page">
 
-    <!-- WEIGHT MANAGEMENT -->
     <h2 class="program-heading">Weight Management</h2>
     <div class="program-grid">
-        <a href="weight-loss.html" class="program-card">Weight Loss</a>
+        <a href="weight-loss.html" class="program-card bg-weightloss">
+</a>
         <a href="weight-loss-medical.html" class="program-card">Weight Loss with Medical Conditions</a>
         <a href="weight-maintenance.html" class="program-card">Weight Maintenance Plan</a>
         <a href="supplements-guide.html" class="program-card">Nutritional Supplements Guide</a>
     </div>
 
-    <!-- WOMEN PACKAGES -->
     <h2 class="program-heading">Women Packages</h2>
     <div class="program-grid">
         <a href="pcos-management.html" class="program-card">PCOS Management</a>
@@ -87,7 +169,6 @@
         <a href="menopause-plan.html" class="program-card">Pre & Post Menopausal Plan</a>
     </div>
 
-    <!-- GENERAL PACKAGES -->
     <h2 class="program-heading">General Packages</h2>
     <div class="program-grid">
         <a href="kids-diet.html" class="program-card">Kids Diet</a>
@@ -96,25 +177,106 @@
         <a href="intermittent-fasting.html" class="program-card">Intermittent Fasting</a>
     </div>
 
-    <!-- DIET PLAN -->
     <h2 class="program-heading">Diet Plan</h2>
-    <a href="diet-plan-package.html" class="program-card wide">
+
+<div class="program-grid diet-grid">
+    <a href="diet-plan-package.html" class="program-card">
         Diet Plan / Package
     </a>
+
+    <a href="gene-test.html" class="program-card">
+        Gene Test
+    </a>
+</div>
+
+
+</section>
+<section id="nutrigenomics" class="about-section nutrigenomics-section">
+
+    <h2 class="section-title">Nutrigenomics Counsellor</h2>
+
+    <div class="about-wrapper">
+
+        <!-- LEFT: IMAGE -->
+        <div class="about-image">
+            <img src="images/nutrigenomics.jpg" alt="Nutrigenomics Counselling">
+        </div>
+
+        <!-- RIGHT: CONTENT -->
+        <div class="about-content">
+            <h3>Personalised Nutrition Based on Your Genes</h3>
+
+            <!-- SHORT INTRO -->
+            <p>
+                As a Nutrigenomics Counsellor, I specialize in personalized nutrition based on an individual’s genetic makeup. By analyzing how genes interact with nutrients, lifestyle, and environmental factors, I help clients optimize their health, manage weight, improve metabolic balance, and reduce the risk of chronic diseases.
+            </p>
+
+            <!-- EXPANDABLE CONTENT -->
+            <div class="about-more nutrigenomics-more">
+                <p>
+                     My approach combines genetic insights with practical dietary guidance, empowering individuals to make informed, sustainable food and lifestyle choices tailored uniquely to their biology.
+                </p>
+
+                <p>
+                    By combining genetic insights with lifestyle and health goals,
+                    nutrigenomics helps individuals make informed nutritional choices
+                    that align with their body’s natural blueprint.
+                </p>
+            </div>
+
+            <!-- READ MORE -->
+            <button class="read-more-btn" onclick="toggleNutrigenomics()">
+                Read More
+            </button>
+        </div>
+
+    </div>
 
 </section>
 
 
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="testimonial-section">
 
-    <section id="testimonials">
-        <h2>Testimonials</h2>
-    </section>
+    <h2>What Our Clients Say</h2>
 
-    <section id="blog">
-        <h2>Blog</h2>
-    </section>
+    <div class="testimonial-container">
 
-   <section id="contact" class="contact-section">
+        <div class="testimonial active">
+            <p>
+                I feel very energetic and healthy after following her.
+                Her diet plan is easy to follow and benefited my whole family.
+            </p>
+            <span>— Sanyogita Yadav</span>
+        </div>
+
+        <div class="testimonial">
+            <p>
+                Dr. Anjana guided me patiently through health recovery
+                with simple and practical meal plans.
+            </p>
+            <span>— Snigdha Ahuja</span>
+        </div>
+
+        <div class="testimonial">
+            <p>
+                Very understanding and flexible diet plans.
+                Highly recommended.
+            </p>
+            <span>— Anamika Singh</span>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+    <h2>Blog</h2>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
 
     <h2>Contact Us</h2>
     <p class="contact-subtext">
@@ -123,65 +285,67 @@
 
     <div class="contact-wrapper">
 
-        <!-- LEFT SIDE -->
         <div class="contact-info">
             <p><strong>Dr. Anjana’s Dietary Solutions</strong></p>
             <p>Holistic Nutrition & Lifestyle Guidance</p>
-
             <p>📍 Pune, India</p>
             <p>📞 +91 8408005462</p>
             <p>✉️ anjana.chugh0132@gmail.com</p>
-
-            <p class="timing">
-                Consultation Timings:<br>
-                Mon – Sat | 11 AM – 8 PM
-            </p>
         </div>
 
-        <!-- RIGHT SIDE MAP -->
         <div class="contact-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.2475160623235!2d73.92629107443052!3d18.517713719262947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c18c333c9bd9%3A0x4d34c58acbac0e41!2sBuilding%20A%2C%20A%2C%20Towards%20John%20Deere%20Inner%20Cir%2C%20Magarpatta%2C%20Hadapsar%2C%20Pune%2C%20Maharashtra%20411013!5e0!3m2!1sen!2sin!4v1766668377237!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.246499827591!2d73.92498247443051!3d18.517759669261615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c18c333c9bd9%3A0x4d34c58acbac0e41!2sBuilding%20A%2C%20A%2C%20Towards%20John%20Deere%20Inner%20Cir%2C%20Magarpatta%2C%20Hadapsar%2C%20Pune%2C%20Maharashtra%20411013!5e0!3m2!1sen!2sin!4v1766840267385!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
     </div>
 
 </section>
 
+<!-- BMI MODAL -->
 <script src="script.js"></script>
+
 <div id="bmi-modal" class="bmi-modal">
     <div class="bmi-card">
         <span class="close-btn" onclick="closeBMI()">×</span>
-
         <h2>BMI Calculator</h2>
-        <div class="bmi-dial">
-    <div class="needle" id="needle"></div>
-</div>
-<div class="bmi-labels">
-    <span id="label-under">Underweight</span>
-    <span id="label-normal">Normal</span>
-    <span id="label-over">Overweight</span>
-    <span id="label-obese">Obese</span>
-</div>
-
 
         <input type="number" id="weight" placeholder="Weight (kg)">
-<input type="number" id="height" placeholder="Height (cm)">
-
-<button onclick="calculateBMI()">Calculate BMI</button>
-
-<p id="bmi-result"></p>
-
-    </div>
-</div>
-<div id="program-modal" class="bmi-modal">
-    <div class="bmi-card program-card">
-        <span class="close-btn" onclick="closeProgram()">×</span>
-
-        <h2 id="program-title"></h2>
-        <p id="program-content"></p>
+        <input type="number" id="height" placeholder="Height (cm)">
+        <button onclick="calculateBMI()">Calculate BMI</button>
+        <p id="bmi-result"></p>
     </div>
 </div>
 
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="footer-wrapper">
+        <div class="footer-col">
+            <h3>Dr. Anjana’s Dietary Clinic</h3>
+            <p>Holistic nutrition and lifestyle guidance.</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contact</h3>
+            <p>📍 Pune, India</p>
+            <p>📞 +91 8408005462</p>
+            <p>✉️ anjana.chugh0132@gmail.com</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        © 2025 Dr. Anjana’s Dietary Clinic. All rights reserved.
+    </div>
+</footer>
 
 </body>
 </html>
