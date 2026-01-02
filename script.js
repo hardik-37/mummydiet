@@ -133,4 +133,35 @@ function openProgram(program) {
 function closeProgram() {
     document.getElementById("program-modal").style.display = "none";
 }
+let testimonials = document.querySelectorAll(".testimonial");
+let currentTestimonial = 0;
+
+setInterval(() => {
+    testimonials[currentTestimonial].classList.remove("active");
+
+    currentTestimonial =
+        (currentTestimonial + 1) % testimonials.length;
+
+    testimonials[currentTestimonial].classList.add("active");
+}, 10000); // 10 seconds
+function toggleAbout() {
+    const more = document.querySelector(".about-more");
+    const btn = document.querySelector(".read-more-btn");
+
+    more.classList.toggle("expanded");
+
+    btn.textContent = more.classList.contains("expanded")
+        ? "Read Less"
+        : "Read More";
+}
+function toggleNutrigenomics() {
+    const more = document.querySelector(".nutrigenomics-more");
+    const btn = event.target;
+
+    more.classList.toggle("expanded");
+
+    btn.textContent = more.classList.contains("expanded")
+        ? "Read Less"
+        : "Read More";
+}
 
