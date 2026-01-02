@@ -1,3 +1,26 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.site-footer {
+    margin-top: auto;
+}
+@media (max-width: 768px) {
+    .footer-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .site-footer {
+        padding: 40px 20px 20px;
+    }
+}
+
 :root {
     --primary: #8C1D40;     /* main wine color */
     --primary-light: #B23A5B;
@@ -739,3 +762,385 @@ nav a {
         min-height: 260px;
     }
 }
+.testimonial-section {
+    position: relative;
+    padding: 55px 20px;
+    text-align: center;
+
+    background-image: url("images/programs-bg.jpg"); /* 👈 your image */
+    background-size: cover;
+    background-position: center;
+}
+.testimonial-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+}
+.testimonial-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+}
+.testimonial-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+.testimonial-section h2 {
+    color: var(--primary);
+    margin-bottom: 40px;
+}
+
+.testimonial-container {
+    max-width: 520px;
+    margin: auto;
+    position: relative;
+    height: 220px; /* fixed height = no jump */
+}
+
+.testimonial {
+    position: absolute;
+    inset: 0;
+
+    background: white;
+    padding: 18px 22px;
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+    opacity: 0;
+    transition: opacity 0.6s ease;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimonial.active {
+    opacity: 1;
+}
+
+.testimonial p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.testimonial span {
+    font-size: 14px;
+    color: var(--primary);
+    font-weight: 600;
+}
+@media (max-width: 768px) {
+    .testimonial-container {
+        height: 160px;
+    }
+
+    .testimonial {
+        padding: 20px;
+    }
+}
+.site-footer {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(11,107,16,0.22), transparent 60%),
+        radial-gradient(circle at 80% 80%, rgba(140,29,64,0.22), transparent 60%),
+        linear-gradient(180deg, #ffffff 0%, #f3ecef 100%);
+    padding: 50px 40px 20px;
+}
+
+.footer-wrapper {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-col h3 {
+    margin-bottom: 14px;
+    color: var(--primary);
+    font-size: 16px;
+}
+
+.footer-col p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #444;
+}
+
+.footer-col ul li a:hover {
+    color: var(--primary);
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+}
+.about-section {
+    padding: 80px 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 50px;
+}
+
+.about-wrapper {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.about-content h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+/* Achievements */
+.about-achievements {
+    max-width: 900px;
+    margin: 60px auto 0;
+    background: rgba(255,255,255,0.75);
+    padding: 30px 35px;
+    border-radius: 16px;
+}
+
+.about-achievements h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.about-achievements ul {
+    padding-left: 20px;
+}
+
+.about-achievements li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+}
+@media (max-width: 768px) {
+    .about-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-image img {
+        max-width: 280px;
+        margin: auto;
+        display: block;
+    }
+
+    .about-achievements {
+        padding: 25px;
+    }
+}
+.about-more {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease, opacity 0.4s ease;
+    opacity: 0;
+}
+
+.about-more.expanded {
+    max-height: 800px; /* large enough for content */
+    opacity: 1;
+}
+
+.read-more-btn {
+    margin-top: 15px;
+    background: none;
+    border: none;
+    color: var(--primary);
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+}
+.about-section {
+    position: relative;
+    padding: 80px 20px;
+
+    background-image: url("images/backgroun_about_anjana.png");
+    background-size: cover;
+    background-position: center;
+}
+.about-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    /* 👇 opacity control */
+    background: rgba(255, 255, 255, 0.65);
+
+    pointer-events: none;
+}
+.about-section > * {
+    position: relative;
+    z-index: 1;
+}
+@media (max-width: 768px) {
+    .about-section::before {
+        background: rgba(255, 255, 255, 0.9);
+    }
+}
+/* Nutrigenomics section background */
+.nutrigenomics-section {
+    position: relative;
+
+    background-image: url("images/nutri-bg.png");
+    background-size: cover;
+    background-position: center;
+}
+.work-section {
+    padding: 80px 20px;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(11,107,16,0.12), transparent 55%),
+        radial-gradient(circle at 80% 80%, rgba(140,29,64,0.12), transparent 55%),
+        linear-gradient(180deg, #ffffff 0%, #f6f2f4 100%);
+}
+
+.work-wrapper {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.work-step {
+    background: rgba(255,255,255,0.85);
+    padding: 30px 25px;
+    border-radius: 16px;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+
+.step-number {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.work-step h3 {
+    margin-bottom: 10px;
+    color: #222;
+    font-size: 16px;
+}
+
+.work-step p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+}
+@media (max-width: 1024px) {
+    .work-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .work-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+.select-program-heading {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.program-heading {
+    margin-top: 0px;   /* 👈 reduce */
+    margin-bottom: 20px;
+}
+  .diet-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 768px) {
+    .diet-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.program-box {
+  width: 280px;
+  height: 180px;
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.bg-weightloss {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url("images/Weight\ loss.png");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.program-box h3 {
+  color: #fff;
+  font-size: 18px;
+  margin: 0;
+}
+.program-box {
+  transition: transform 0.3s ease;
+}
+
+.program-box:hover {
+  transform: translateY(-6px);
+}
+
+  
+
+
