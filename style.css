@@ -1140,6 +1140,14 @@ nav a {
 .program-box:hover {
   transform: translateY(-6px);
 }
+@media (max-width: 768px) {
+    .program-card {
+        background-size: contain;   /* 👈 key fix */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #000;     /* fills empty space cleanly */
+    }
+}
 
   
 
