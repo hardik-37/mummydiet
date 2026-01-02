@@ -146,7 +146,8 @@ nav a {
     }
 
     .hero {
-        min-height: 70vh;
+        min-height: auto;
+        padding: 40px 0;
     }
 
     .service-cards {
@@ -163,13 +164,54 @@ nav a {
     justify-content: space-between;
     align-items: center;
 }
+/* HERO WRAPPER */
+.hero {
+    width: 100%;
+    padding: 30px 0;
+    background: #8c1d40; /* temporary background */
+}
+
+/* SCROLL CONTAINER */
 .banner-container {
     display: flex;
-    gap: 20px;
+    gap: 24px;
     overflow-x: auto;
-    width: 100%;
-    padding-bottom: 10px;
+    padding: 0 5vw;
+    scroll-snap-type: x mandatory;
 }
+
+/* INDIVIDUAL BANNERS */
+.banner {
+    flex: 0 0 90%;
+    height: 260px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 28px;
+    scroll-snap-align: center;
+}
+
+/* IMAGES */
+.banner-1 {
+    background-image: url("images/logo.png");
+}
+.banner-2 {
+    background-image: url("images/banner2.jpg");
+}
+.banner-3 {
+    background-image: url("images/banner3.jpg");
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .banner {
+        height: 180px;
+        flex: 0 0 92%;
+    }
+}
+
 
 
 
@@ -180,6 +222,15 @@ nav a {
     display: flex;
     align-items: center;
 }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .banner {
+        height: 140px;
+        width: 90vw;
+    }
+}
+
 
 
 
@@ -473,7 +524,8 @@ nav a {
 }
 
 .program-block {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+    margin-top: 10px;
 }
 
 .program-block h2 {
@@ -505,24 +557,93 @@ nav a {
 /* PROGRAM BANNER */
 /* FULL PAGE BANNER */
 .banner-hero {
-    height: 25vh;
-    background-image: url("images/weight-loss-banner.png");
+    width: 100%;
+    min-height: 35vh;          /* desktop height */
+    background-image: url("images/weight_loss_1600_600.png");
     background-size: cover;
-    background-position: center;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
+/* Mobile */
 @media (max-width: 768px) {
     .banner-hero {
-        height: 40vh;
-        background-image: url("images/banner1.png");
+        min-height: 25vh;      /* mobile height */
         background-position: center;
     }
 }
+
+.weight-loss_banner{
+    background-image: url("images/weight_loss_1600_600.png");
+}
+.weight-loss-medical-banner {
+    background-image: url("images/test.png");
+}
+
+
+/* Mobile fix */
+/*@media (max-width: 768px) {
+    .banner-hero {
+        height: 22vh;   /* smaller, cleaner on mobile 
+        background-position: center center;
+    }
+}
+*/
+.pricing-table {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.pricing-table table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.pricing-table th,
+.pricing-table td {
+    padding: 14px 16px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.pricing-table th {
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+}
+
+.pricing-table td {
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    color: #444;
+}
+
+.pricing-table tr:last-child td {
+    border-bottom: none;
+}
+
+.pricing-note {
+    font-size: 13px;
+    color: #666;
+    margin-top: 12px;
+    text-align: center;
+}
+
 
 /* Weight Maintenance Banner */
 .maintenance-banner {
     background-image: url("images/weight-maintenance-banner.png");
 }
+.suppl-banner {
+    background-image: url("images/nutri.png");
+}
+
+.pcos-banner{
+    background-image: url("images/logo.png");
+}
+
 .programs-grid-page {
     padding: 80px 40px;
     background: #fff;
@@ -582,7 +703,7 @@ nav a {
 }
 
 .program-block {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 .program-block h1 {
@@ -648,7 +769,7 @@ nav a {
 
 
 .program-block {
-    margin-bottom: 60px;
+    margin-bottom: 5px;
 }
 
 .program-block:not(:last-child) {
@@ -1097,9 +1218,12 @@ nav a {
     margin-top: 0px;   /* 👈 reduce */
     margin-bottom: 20px;
 }
-  .diet-grid {
-    grid-template-columns: repeat(2, 1fr);
+ /* Diet Plan section: stack items vertically */
+.diet-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;      /* optional: keeps it elegant */
 }
+
 @media (max-width: 768px) {
     .diet-grid {
         grid-template-columns: 1fr;
@@ -1126,7 +1250,153 @@ nav a {
   background-size: cover;
   background-position: center;
 }
+.bg-dp{
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url("images/Diet\ plan\ \ package.png");
+  background-size: cover;
+  background-position: center;
+}
+.bg-gt 
+{
+   background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url("images/Gene\ test.png");
+  background-size: cover;
+  background-position: center; 
+}
+.bg-weightloss-mc{
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url("images/weight\ loss\ with\ medical\ condition_1600\ X\ 600.png");
+  background-size: cover;
+  background-position: center;
+}
+.bg-wm{
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url("images/Weight\ maintenance\ plan.png");
+  background-size: cover;
+  background-position: center;
+}
+.bg-nsg{
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url("images/Nutritional\ supplement\ guide.png");
+  background-size: cover;
+  background-position: center;
 
+}
+.bg-pcos{
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url("images/PCOS\ management.png");
+  background-size: cover;
+  background-position: center;
+
+}
+.bg-pal
+{
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url("images/Pregency\ &\ lactation\ \(1\).png");
+  background-size: cover;
+  background-position: center;
+
+}
+.bg-pm
+{
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url("images/Pre\ and\ post\ menopausal\ plan.png");
+  background-size: cover;
+  background-position: center;
+
+}
+.bg-pp
+{
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url("images/Post\ pregnancy\ weight\ loss.png");
+  background-size: cover;
+  background-position: center;
+
+}
+.bg-kd
+{
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url("images/Kids\ diet.png");
+  background-size: cover;
+  background-position: center;
+
+}
+.bg-wg
+{
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url("images/Weight\ gain.png");
+  background-size: cover;
+  background-position: center;
+
+}
+.bg-hm
+{
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url("images/Health\ maintenance\ plan.png");
+  background-size: cover;
+  background-position: center;
+
+}
+.bg-if
+{
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url("images/Intermittent\ fasting.png");
+  background-size: cover;
+  background-position: center;
+
+}
 
 .program-box h3 {
   color: #fff;
@@ -1148,6 +1418,31 @@ nav a {
         background-color: #000;     /* fills empty space cleanly */
     }
 }
+/* Diet Plan vertical stack but same size as others */
+.diet-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    /* MATCH width of other grids */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Ensure diet cards match other program cards */
+.diet-grid .program-card {
+    height: 180px;            /* SAME as other cards */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 768px) {
+    .diet-grid .program-card {
+        height: 160px;
+    }
+}
+
 
   
 
